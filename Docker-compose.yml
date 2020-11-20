@@ -1,0 +1,30 @@
+# for local development
+---
+version: '3.8'
+services:
+  quasar:
+    build:
+      context: ./web/
+      target: 'develop-web'
+    image: 'node:14.10-alpine'
+    ports:
+      - '8080:8080'
+    volumes:
+      - '.:/app'
+    # command:
+      # - /bin/sh -c 'yarn global add @quasar/cli'
+      # - /bin/sh -c "yarn && quasar dev"
+  api:
+    build:
+      context: ./api/
+      target: 'develop-api'
+    image: 'node:14.10-alpine'
+    ports:
+      - '3333:3333'
+    volumes:
+      - './app'
+    # oommand:
+      # - /bin/sh -c 'apk update && apk upgrade'
+      # - /bin/sh -c 'apk add git'
+      # - /bin/sh -c 'npm i'
+      # - /bin/sh -c 'node --trace-warnings ace serve'

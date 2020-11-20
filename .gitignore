@@ -1,55 +1,35 @@
 .DS_Store
+.thumbs.db
+node_modules
 
-## BACKEND API
-# Editor directories and files
-api/.idea
-api/.*.suo
-api/.*.ntvs*
-api/.*.njsproj
-api/.*.sln
-api/.vscode
-
-api/node_modules
-
-## FRONTEND WEB
 # Quasar core related directories
-web/.quasar
-web/dist
-
-# Editor directories and files
-web/*.njsproj
-web/*.ntvs*
-web/*.sln
-web/*.suo
-web/.DS_Store
-web/.idea
-web/.thumbs.db
-web/.vscode
-web/node_modules
-web/npm-debug.log*
-web/src-cordova/node_modules
-web/src-cordova/platforms
-web/src-cordova/plugins
-web/src-cordova/www
-web/yarn-debug.log*
-web/yarn-error.log*
+.quasar
+/dist
 
 # Cordova related directories and files
-web/src-cordova/node_modules
-web/src-cordova/platforms
-web/src-cordova/plugins
-web/src-cordova/www
+/src-cordova/node_modules
+/src-cordova/platforms
+/src-cordova/plugins
+/src-cordova/www
 
 # Capacitor related directories and files
-web/src-capacitor/www
-web/src-capacitor/node_modules
+/src-capacitor/www
+/src-capacitor/node_modules
 
 # BEX related directories and files
-web/src-bex/www
-web/src-bex/js/core
+/src-bex/www
+/src-bex/js/core
 
 # Log files
-web/npm-debug.log*
-web/yarn-debug.log*
-web/yarn-error.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.vscode/
 
