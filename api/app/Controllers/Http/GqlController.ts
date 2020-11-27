@@ -6,13 +6,7 @@ const { graphqlAdonis } = require('apollo-server-adonis')
 const { makeExecutableSchema } = require('graphql-tools')
 const schema = makeExecutableSchema({ typeDefs, resolvers })
 
-// Argument of type 'ResponseConstructorContract' is not assignable to parameter of type 'RouteHandler'.
-//   Type 'ResponseConstructorContract' is not assignable to type '(ctx: HttpContextContract) => Promise<any>'.
-//     Type 'ResponseConstructorContract' provides no match for the signature '(ctx: HttpContextContract): Promise<any>'
-
-
-export default class GraphqlController {
-
+export default class GqlController {
   public static post (): typeof Response {
     return graphqlAdonis({
       schema: schema,

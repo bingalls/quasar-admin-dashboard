@@ -1,8 +1,8 @@
-import Response from '@ioc:Adonis/Core/Response'
+// import Response from '@ioc:Adonis/Core/Response'
 const { graphiqlAdonis } = require('apollo-server-adonis')
 
 export default class GraphiqlController {
-  public static get (): typeof Response {
+  public static get (): any {
     return graphiqlAdonis({
       endpointURL: '/graphql',
     })
