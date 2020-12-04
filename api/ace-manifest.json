@@ -1,0 +1,10 @@
+{
+  "scrape": {
+      "settings": {
+        "loadApp": true
+      },
+      "commandPath": "./commands/Scrape",
+      "commandName": "scrape",
+      "description": "Scrape web for new data into DB"
+  }
+}
