@@ -1,5 +1,5 @@
 import { BaseCommand } from '@adonisjs/core/build/standalone'
-// import { Element } from 'nightmare';
+// import Element from 'node_modules/';
 import Nightmare from 'nightmare';
 
 // interface ScrapeElement extends Element {
