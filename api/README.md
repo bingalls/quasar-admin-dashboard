@@ -2,14 +2,12 @@
 See my Adonisql-spdr repo for the older Adonis v4 example.
 Adonis.js made a disruptive change to Typescript, breaking any v4 examples you might find.
 
-This is an example of a Careers site, where an email key posts a description.
-To keep it simple, this only provides 
+This is an example dashboard, using data scraped from CraigsList
 
 ## Requirements
-* nodejs v14.x LTS
-As of 2020-11, Node v15 is still too unstable.
+* nodejs >= v14.x LTS
 
-### Recommended
+### Optional
 * [Volta](https://volta.sh/) Ensures correct node version. Available as `brew install volta`
 
 ## Setup
@@ -29,9 +27,9 @@ npm run start
 `open http://127.0.0.1:3333/graphiql` # OSX; Linux: `xdg-open`
 
 In the left graphiql window, try these example graphql statements
-* QUERY: ` {careers{email, description}} `
-* ` {career{email, description}} `    # first listing, only
-* ` mutation{ createCareer(email: "email@example.com", description: "job description") } `
+* QUERY: ` {postings{email, description}} `
+* ` {posting{email, description}} `    # first listing, only
+* ` mutation{ createPosting(href: "https://localhost", summary: "test posting") } `
 
 ## Database Option
 Sqlite is the default database for development.
@@ -53,13 +51,13 @@ node ace migration:run
 node ace db:seed
 ```
 ## How to Use
-Currently, this serves a simplistic example API for a job posting site, where 
-each posting has an email address & description.
+Currently, this serves a simplistic example API for a dashboard, using 
+postings scraped from CraigsList.
 Change this to your need, by editing 
 * app/data/schema.ts
 * app/data/resolvers.ts
-After changing the name of your schema from Careers, update
-* app/Models/Career.ts
+After changing the name of your schema from Postings, update
+* app/Models/Posting.ts
 * start/routes.ts
 
 ## Notice
@@ -69,7 +67,5 @@ Re-enable CSRF for production
 Npm package dependencies can be version sensitive. Upgrade carefully in
 small increments, and stay with Node LTS versions.
 
-Adonisjs v5 rc does not yet support unit test creation.
-[A v4 TDD tutorial may help you
-](https://dev.to/michi/tdd-course-with-adonisjs-1-let-s-build-a-simple-forum-199)
+Adonisjs v5 rc's unit test framework is currently rolling out
 

@@ -1,23 +1,23 @@
-import Career from 'App/Models/Career'
+import Posting from 'App/Models/Posting'
 import Database from '@ioc:Adonis/Lucid/Database'
 
-interface CareerSchema {
-  readonly description: string
-  readonly email: string
+interface PostingSchema {
+  readonly href: string
+  readonly summary: string
 }
 
 const resolvers = {
   Query: {
-    careers: async () => await Database.query().from('careers'),
-    career: async () => await Database.query().from('careers').limit(1),
+    postings: async () => await Database.query().from('postings'),
+    posting: async () => await Database.query().from('postings').limit(1),
   },
   Mutation: {
-    createCareer: async (root :any, args: CareerSchema) => { //(root, args, context, info)
+    createPosting: async (root :any, args: PostingSchema) => { //(root, args, context, info)
       void(root) // syntax sugar to lint unused param
-      const career = new Career()
-      career.email = args.email.toString()
-      career.description = args.description.toString()
-      const result = await career.save()
+      const posting = new Posting()
+      posting.href = args.href.toString().trim()
+      posting.summary = args.summary.toString().trim().toLocaleLowerCase()
+      const result = await posting.save()
       return result.toString()
     },
   },

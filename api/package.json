@@ -10,7 +10,7 @@
   "devDependencies": {
     "@adonisjs/assembler": "^3.0.6",
     "adonis-preset-ts": "^1.1.0",
-    "eslint": "^7.14.0",
+    "eslint": "^7.15.0",
     "eslint-plugin-adonis": "^1.0.15",
     "pino-pretty": "^4.3.0",
     "typescript": "^4.1.2",
@@ -21,7 +21,7 @@
     "@adonisjs/application": "^3.0.21",
     "@adonisjs/core": "^5.0.4-preview-rc-2.1",
     "@adonisjs/ioc-transformer": "^1.0.3",
-    "@adonisjs/lucid": "^8.5.0",
+    "@adonisjs/lucid": "^10.0.0",
     "@types/nightmare": "^2.10.4",
     "apollo-server": "^2.19.0",
     "apollo-server-adonis": "^1.4.0",

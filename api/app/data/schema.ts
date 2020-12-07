@@ -1,15 +1,15 @@
 // GraphQL schema in string form
 const typeDefs = `
-  type Career {
-    email: String
-    description: String
+  type Posting {
+    href: String
+    summary: String
   }
   type Query {
-    careers: [Career]
-    career: [Career]
+    postings: [Posting]
+    posting: [Posting]
   }
   type Mutation {
-    createCareer(email: String, description: String): String
+    createPosting(href: String, summary: String): String
   }
 `
 

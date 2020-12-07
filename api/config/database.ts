@@ -21,7 +21,7 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
   | file.
   |
   */
-  connection: Env.get('DB_CONNECTION', 'sqlite') as string,
+  connection: Env.get('DB_CONNECTION'),
 
   connections: {
     /*
@@ -42,7 +42,9 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
       },
       useNullAsDefault: true,
       healthCheck: false,
+			debug: false,
     },
+
   },
 
   /*
